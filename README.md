@@ -62,14 +62,34 @@ used.
 • The tool used for Synthesis is “Genus”. Hence, type “genus -gui” to open the tool.
 
 • Genus Script file with .tcl file Extension commands are executed one by one to synthesize the netlist.
+          read_libs  <Library Path>
+          read_hdl counter.v
+          elaborate
+          read_sdc input_constraints.sdc 				
+          syn_generic
+          report_area
+          syn_map
+          report_area
+          syn_opt 
+          report_area					
+          report_timing > counter_timing.txt			
+          report_area > counter_area.txt			
+          report_power > counter_power.txt			
+          write_hdl > counter_netlist.v 				
+          write_sdc > counter_output_constraints.sdc		
+          gui_show
 
 #### Synthesis RTL Schematic :
+![WhatsApp Image 2024-11-22 at 15 47 36_b9fe2014](https://github.com/user-attachments/assets/7ec95ea7-9422-421d-b5b6-0425c30e23a6)
 
 #### Area report:
+![WhatsApp Image 2024-11-22 at 12 37 48_d218f66c](https://github.com/user-attachments/assets/cd6e3aa5-998f-4dd4-9c79-f6fc4e2ab78a)
 
 #### Power Report:
+![WhatsApp Image 2024-11-22 at 12 37 48_b786b315](https://github.com/user-attachments/assets/656c39df-ac59-448c-96cc-e44a2322fab2)
 
 #### Timing Report: 
+![WhatsApp Image 2024-11-22 at 12 37 48_8cdbf6a3](https://github.com/user-attachments/assets/92d2eb32-fbdb-414a-8986-38b3357a196d)
 
 #### Result: 
 
